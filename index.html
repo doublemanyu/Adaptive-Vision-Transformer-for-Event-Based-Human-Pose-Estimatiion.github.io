@@ -194,37 +194,18 @@
             Event camera capture more information than traditonal camera under low light scenes.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/lowlight.mp4"
-                type="video/mp4">
-            </video>
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+        
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/lowlight.mp4"
+            type="video/mp4">
+        </video> 
+         
         </div>
         <br/>
         <!--/ Event-BasedHPE. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- Dataset. -->
+        <h3 class="title is-4">Existing dataset</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -242,7 +223,7 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
+        <!--/ Dataset. -->
 
       </div>
     </div>
