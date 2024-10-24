@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Adaptive Vision Transformer consider the inherent spatial sparsity of event data, using adaptive sampling and adaptive dropout to improve efficiency.">
+  <meta name="keywords" content="Event camera, Event-Based Human Pose Estimation, Adaptive Vision Transformer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Adaptive Vision Transformer for Event-Based Human Pose Estimation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -258,31 +258,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
+            Event-based human pose estimation has gained popularity due to the benefits of high temporal resolution and high dynamic range offered by event cameras. 
+            The inherent spatial sparsity of event data makes discarding less significant regions a straightforward and effective way to decrease the computation. 
+            However, implementing this operation in CNNs poses a challenge, as it disrupts the regularity of dense convolutional workload.
+         </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            In this paper, we propose an adaptive vision transformer, a novel efficient backbone for human pose estimation with event cameras.
+            Specifically, we present two adaptive patch and token sampling approaches based on the characteristics of events, thereby reducing the computational load while still achieving comparable performance. 
+            Firstly, we design an adaptive patch sampling scheme to eliminate inactivity patches by assessing the entropy of the events before they are inputted into the transformer. 
+            Secondly, we further propose an adaptive token reduction strategy to selectively remove less informative tokens in transformer layers through a dynamic token pruning algorithm. 
+            To exploit event-based visual cues in human pose estimation tasks, we construct a large-scale frame-event-based dataset, dubbed Event Multi Movement HPE (EventMM HPE). The dataset provides annotation frequencies up to 240 Hz. 
+            Extensive experimentsdemonstrate that our proposed approach outperforms existing state-of-the-art methods in estimation accuracy. 
+            The source code and dataset are available at https://github.com/doublemanyu/AdaptiveVision-Transformer-for-Event-Based-HPE. 
           </p>
         </div>
       </div>
